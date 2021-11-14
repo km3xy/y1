@@ -1,0 +1,100 @@
+php编译完php.ini加载问题-Loaded Configuration File (none)
+编译安装php7时指定了--with-config-file-path=/usr/local/php7/etc，修改了 php.ini 的配置后重启，但就是不生效。
+出现Loaded Configuration File：(none)
+
+编译过程
+
+要使用源码中的phpize生成configure，
+
+/usr/local/php/bin/phpize
+接下来执行configure
+
+./configure \
+--prefix=/usr/local/php\
+--with-mhash \
+--with-openssl \
+--with-config-file-path=/usr/local/php/etc \
+--disable-short-tags \
+--enable-fpm \
+--with-fpm-user=php-fpm \
+--with-fpm-group=php-fpm \
+--enable-xml \
+--with-libxml-dir \
+--enable-bcmath \
+--enable-calendar \
+--enable-intl \
+--enable-mbstring \
+--enable-pcntl \
+--enable-shmop \
+--enable-soap \
+--enable-sockets \
+--enable-zip \
+--enable-mbregex \
+--enable-mysqlnd \
+--enable-mysqlnd-compression-support \
+--with-mysqli=mysqlnd \
+--with-pdo-mysql=mysqlnd \
+--with-gd \
+--enable-ftp \
+--with-curl \
+--with-xsl \
+--with-iconv \
+--with-freetype-dir \
+--with-jpeg-dir \
+--with-png-dir \
+--with-zlib \
+--enable-sysvsem \
+--enable-inline-optimization \
+--with-xmlrpc \
+--with-gettext
+
+
+这个里面的参数--prefix是你php安装的目录
+
+--with-config-file-path=/usr/local/php/etc 
+这是你php.ini 的存放目录
+
+--enable-fpm 
+
+
+这个参数是生成你的php-fpm相关，没有这个参数你编译的php就没有php-fpm的文件
+接下来执行
+
+make
+make test
+make install
+
+php源码的文件包中将php.ini-development复制过来修改名称为php.ini
+
+加载配置文件
+
+phpinfo中参数是正确的,但出现
+
+Loaded Configuration File：(none)
+
+查看php.ini的文件位置
+
+
+php -i|grep php.ini
+
+方法一
+/usr/local/php/sbin/php-fpm -y /usr/local/php/etc/php-fpm.conf -c /usr/local/php/etc/php.ini
+
+重启php和nginx
+方法二
+strace  /alidata/server/php/bin/php -i 2> php_trace.log
+less php_trace.log
+找到加载php.ini 查询目录
+￼
+
+在相应目录下建立软连接或者将etc下php.ini移植到目录
+
+ln -s etc/php.ini lib/php.ini或者 mv etc/php.ini lib/php.ini
+分类: PHP
+标签: php.ini
+
+
+https://www.cnblogs.com/sentangle/p/12054332.html
+
+
+

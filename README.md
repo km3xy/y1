@@ -9,4 +9,9 @@ termux  安装php 后
 php -i|grep php.ini
 
 
-学习笔记1
+
+termux查找  php.ini 文件命令
+
+~ $ php -i|grep php.ini
+Configuration File (php.ini) Path => /data/data/com.termux/files/usr/lib
+~ $

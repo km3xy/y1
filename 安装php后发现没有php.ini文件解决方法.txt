@@ -1,10 +1,6 @@
 linux常用命令总结
   
 phpinfo中Loaded Configuration File 为 none 原创
-2014-08-17 15:23:40
- 4点赞
-
-一点点就好了吗 
 
 
 今天在安装php后发现没有php.ini文件
@@ -12,7 +8,10 @@ phpinfo中Loaded Configuration File 为 none 原创
 ./configure --prefix=/usr/local/php/ --with-config-file-path=/usr/local/php/etc/ --enable-fpm
 
 在安装目录下搜了一下也没发现
+
+
 find ./ -name '*ini*'
+
 然后就查看了phpinfo信息，但是
 
 [root@localhost php]# php -i | grep ini
@@ -43,11 +42,26 @@ Loaded Configuration File	/usr/local/php/etc/php.ini
 /usr/local/php/sbin/php-fpm -y /etc/php-fpm.conf -c /etc/php.ini
 命令行：
 
+
+
+termux查找  php.ini 文件命令
+
+~ $ php -i|grep php.ini
+Configuration File (php.ini) Path => /data/data/com.termux/files/usr/lib
+~ $
+
+
+
+//   php -i | grep ini
+
+
+
 [root@localhost php]# php -i | grep ini
 Configuration File (php.ini) Path => /usr/local/php/etc/
 Scan this dir for additional .ini files => (none)
 
 nginx：
+
 Configuration File (php.ini) Path	/usr/local/php/etc/
 Loaded Configuration File/etc/php.ini
 
@@ -56,3 +70,11 @@ Loaded Configuration File/etc/php.ini
 phpinfo()中Loaded Configuration File(none)的解决方法
 
 主要给大家介绍了phpinfo()中Loaded Configuration File(none)问题的解决方法,需要的朋友可以参考借鉴，下面来一起看看吧。
+
+
+
+https://blog.csdn.net/haitun312366/article/details/38639129
+
+
+
+

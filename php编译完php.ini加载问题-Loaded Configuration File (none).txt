@@ -1,5 +1,9 @@
 php编译完php.ini加载问题-Loaded Configuration File (none)
-编译安装php7时指定了--with-config-file-path=/usr/local/php7/etc，修改了 php.ini 的配置后重启，但就是不生效。
+
+编译安装php7时指定了--with-config-file-path=/usr/local/php7/etc，
+
+修改了 php.ini 的配置后重启，但就是不生效。
+
 出现Loaded Configuration File：(none)
 
 编译过程
@@ -95,6 +99,14 @@ ln -s etc/php.ini lib/php.ini或者 mv etc/php.ini lib/php.ini
 
 
 https://www.cnblogs.com/sentangle/p/12054332.html
+
+
+
+termux查找  php.ini 文件命令
+
+~ $ php -i|grep php.ini
+Configuration File (php.ini) Path => /data/data/com.termux/files/usr/lib
+~ $
 
 
 

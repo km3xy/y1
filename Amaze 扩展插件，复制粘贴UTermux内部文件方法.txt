@@ -1,8 +1,8 @@
 UTermux  的   Amaze   扩展插件，
 
-Amaze   扩展插件，复制粘贴UTermux文件
+Amaze   扩展插件，复制粘贴 UTermux内部文件，
 
-里面  的系统  文件方法  
+里面 内部 文件 到外部的方法  
 
 
 选中，文件，打上对号，

@@ -48,7 +48,7 @@ $ make
 The binaries that are now compiled are available in the src directory. Run Redis with:
 
 
-cd src
+$ cd src
 
 
 src/redis-server
@@ -66,6 +66,7 @@ You can interact with Redis using the built-in client:
 
 $     自己找目录 src/redis-cli 
 
+或
 
 ./src/redis-cli 
 
@@ -302,4 +303,7 @@ https://www.redis.com.cn/linux-install-redis.html
 
 
 https://www.redis.com.cn/php-redis.html
+
+
+
 

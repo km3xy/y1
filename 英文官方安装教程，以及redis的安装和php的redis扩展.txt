@@ -1,4 +1,4 @@
-官方安装教程，以及redis的安装和php的redis扩展
+英文官方安装教程，以及redis的安装和php的redis扩展
 
 
 php的redis扩展不是redis本身
@@ -47,6 +47,17 @@ $ cd redis-6.2.6
 $ make
 The binaries that are now compiled are available in the src directory. Run Redis with:
 
+
+cd src
+
+
+src/redis-server
+
+或
+
+./src/redis-server
+
+
 $ 自己找目录 src/redis-server
 
  或直接  $ redis-server
@@ -54,6 +65,10 @@ $ 自己找目录 src/redis-server
 You can interact with Redis using the built-in client:
 
 $     自己找目录 src/redis-cli 
+
+
+./src/redis-cli 
+
 
 或直接$ redis-cli
 
@@ -269,8 +284,22 @@ predis是php连接redis的操作库
 
 关键词搜索
 
-predis 学习更多
+predis    学习更多
+
+
+redis中文官方教程，详细教程
+
+
+https://github.com/phpredis/phpredis/releases
+
+//   tags下面  Tags里面下载phpredis扩展
+
+
+redis中文官方教程，详细教程
+
+https://www.redis.com.cn/linux-install-redis.html
 
 
 
+https://www.redis.com.cn/php-redis.html
 

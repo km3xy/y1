@@ -28,6 +28,11 @@ $ make
 
 $ 自己找目录 src/redis-server
 
+
+# cd src
+# ./redis-server
+
+
  或直接  $ redis-server
 
 $     自己找目录 src/redis-cli 
@@ -49,6 +54,10 @@ The binaries that are now compiled are available in the src directory. Run Redis
 
 
 $ cd src
+
+
+# cd src
+# ./redis-server
 
 
 src/redis-server
